@@ -18,7 +18,7 @@ pipeline {
                     try { 
                         echo "⚙️ Instalando dependencias..." 
                         sh 'npm install' 
-           sh 'npm run build' 
+                        sh 'npm run build' 
                     } catch (Exception e) { 
                         error("❌ Error en la etapa de Build") 
                     } 
@@ -31,7 +31,7 @@ pipeline {
                 script { 
                     try { 
                         echo "🧪 Ejecutando pruebas..." 
-                        sh 'npm test' 
+                        sh 'npm run test' 
                     } catch (Exception e) { 
                         error("❌ Error en la etapa de Test") 
                     } 
